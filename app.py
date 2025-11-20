@@ -20,7 +20,8 @@ def fetch_weather(city):
     completeUrl = baseUrl + "appid=" + appId + "&q=" + city + "&units=metric"
     response = requests.get(completeUrl)
     weather_data = response.json()
-    print(weather_data)
+    temperature = weather_data['main']['temp']
+    tempLabel.config(text=f"Temperature: {temperature} °C")
 
 
 def Find():
@@ -38,14 +39,18 @@ search_Button.grid(row=0, column=2, padx=10)
 
 searchFrame.grid(row=0, column=1, padx=20, pady=20)
 
-### Add Weather Image
+### Add Weather Details
 weatherIcon = Image.open("img/weather.png")
 weatherResized = weatherIcon.resize((100, 100))
-
-
 weatherImage = ImageTk.PhotoImage(weatherResized)
+
+
 weatherLabel = tk.Label(root, image=weatherImage)
 weatherLabel.grid(row=1, column=1, padx=20, pady=20)
+
+tempLabel = tk.Label(root, text="Temperature: °C", font=("Helvetica", 20))
+tempLabel.grid(row=2, column=1, padx=20, pady=10)
+
 
 root.columnconfigure(0, weight=1)
 root.columnconfigure(1, weight=0)
