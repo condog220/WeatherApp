@@ -1,15 +1,14 @@
 import tkinter as tk
 import requests
 from PIL import Image, ImageTk
-import os
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
 
 # OpenWeatherMap API configuration
 baseUrl = "http://api.openweathermap.org/data/2.5/weather?"
 city = ""
-completeUrl = baseUrl + "appid=" + appId + "&q=" + city + "&units=metric"
 
 root = tk.Tk()
 root.geometry("800x600")
@@ -20,13 +19,12 @@ searchVar = tk.StringVar()
 
 
 def fetch_weather():
-    appId = os.environ.get("WEATHER_API_KEY")
+    appId = os.getenv("WEATHER_API_KEY")
 
     if not appId:
-        print("Error: WEATHER_API_KEY environment variable not set.")
+        print("API Key not found. Please set the API_KEY environment variable.")
         return
     
-
     city = searchVar.get()
     completeUrl = baseUrl + "appid=" + appId + "&q=" + city + "&units=metric"
 
