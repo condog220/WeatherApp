@@ -42,9 +42,10 @@ def fetch_weather():
     currentWeatherLabel.config(text=f"Current Weather: {city}")
 #---------------------------------------------------#
 #Add Search Box
-cityText = tk.Label(searchFrame, text= "City:")
+cityText = tk.Label(searchFrame, text= "City:", bg=colour, font=("Helvetica", 16))
 search_entry = tk.Entry(searchFrame, textvariable=searchVar, font=("Helvetica", 16))
 search_Button = tk.Button(searchFrame, text="Search", command=fetch_weather,  font=("Helvetica", 16))
+searchFrame.configure(bg=colour)
 
 cityText.grid(row=0, column=0)
 search_entry.grid(row=0, column=1)
@@ -54,19 +55,19 @@ searchFrame.grid(row=0, column=1, padx=20, pady=20)
 #---------------------------------------------------#
 #Add current weather information
 currentWeatherLabel = tk.Label(root, text="Current Weather: ", font=("Helvetica", 16), bg=colour)
-currentWeatherLabel.grid(row=0, column=2, padx=20, pady=20)
+currentWeatherLabel.grid(row=0, column=2, padx=80, pady=20)
 
 ### Add Weather Details
 weatherIcon = Image.open("img/weather.png")
-weatherResized = weatherIcon.resize((50, 50))
+weatherResized = weatherIcon.resize((100, 100))
 weatherImage = ImageTk.PhotoImage(weatherResized)
 
 
 weatherLabel = tk.Label(root, image=weatherImage, bg=colour)
-weatherLabel.grid(row=1, column=1, padx=20, pady=20)
+weatherLabel.place(relx=0.5, rely=0.4, anchor="center")
 
 tempLabel = tk.Label(root, text="Temperature: °C", font=("Helvetica", 20), bg=colour)
-tempLabel.grid(row=2, column=1, padx=20, pady=10)
+tempLabel.place(relx=0.5, rely=0.52, anchor="center")
 #---------------------------------------------------#
 # Add Humidity Details
 humidityIcon = Image.open("img/humidity.png")
