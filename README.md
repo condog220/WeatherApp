@@ -53,4 +53,4 @@ python app.py
 *   **[Python](https://www.python.org/)**: Core programming language.
 *   **[Tkinter](https://docs.python.org/3/library/tkinter.html)**: Standard GUI library for Python.
 *   **[OpenWeatherMap API](https://openweathermap.org/)**: Source for real-time weather data.
-*   **[Pillow (PIL)](https://python-pillow.org/)**: Python Imaging Library for handling images.
+*   **[Pillow (PIL)](https://pillow.readthedocs.io/en/stable/)**: Python Imaging Library for handling images.
