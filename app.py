@@ -59,7 +59,7 @@ currentWeatherLabel.grid(row=0, column=2, padx=80, pady=20)
 
 ### Add Weather Details
 weatherIcon = Image.open("img/weather.png")
-weatherResized = weatherIcon.resize((100, 125))
+weatherResized = weatherIcon.resize((100, 100))
 weatherImage = ImageTk.PhotoImage(weatherResized)
 
 
