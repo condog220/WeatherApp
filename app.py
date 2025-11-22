@@ -82,21 +82,20 @@ separator = tk.Frame(root, bg="black", height=2, width=300)
 separator.place(relx=0.5, rely=0.57, anchor="center")
 
 # Pressure
-pressureLabel = tk.Label(root, text="Pressure: hPa", font=("Helvetica", 12), bg=colour)
+pressureLabel = tk.Label(root, text="Pressure: hPa", font=("Helvetica", 16), bg=colour)
 pressureLabel.place(relx=0.2, rely=0.65, anchor="center")
 
 # Humidity
-humidityLabel = tk.Label(root, text="Humidity: %", font=("Helvetica", 12), bg=colour)
+humidityLabel = tk.Label(root, text="Humidity: %", font=("Helvetica", 16), bg=colour)
 humidityLabel.place(relx=0.4, rely=0.65, anchor="center")
 
 # Max Temp
-maxTempLabel = tk.Label(root, text="Max Temp: °C", font=("Helvetica", 12), bg=colour)
+maxTempLabel = tk.Label(root, text="Max Temp: °C", font=("Helvetica", 16), bg=colour)
 maxTempLabel.place(relx=0.6, rely=0.65, anchor="center")
 
 # Min Temp
-minTempLabel = tk.Label(root, text="Min Temp: °C", font=("Helvetica", 12), bg=colour)
+minTempLabel = tk.Label(root, text="Min Temp: °C", font=("Helvetica", 16), bg=colour)
 minTempLabel.place(relx=0.8, rely=0.65, anchor="center")
-#---------------------------------------------------#
 
 
 
